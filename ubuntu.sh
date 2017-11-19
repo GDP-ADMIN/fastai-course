@@ -14,5 +14,4 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install -y docker-ce=17.09.0~ce-0~ubuntu nvidia-docker2=2.0.1+docker17.09.0-1
 sudo service docker reload # Docker engine need to be reloaded so it recognize nvidia runtime
-sudo sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+sudo usermod -aG docker $USER
