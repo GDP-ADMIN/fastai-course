@@ -5,7 +5,7 @@ MAINTAINER Roy Inganta Ginting <roy.i.ginting@gdplabs.id>
 ENV PATH=/opt/anaconda2/bin:$PATH
 
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y curl ca-certificates bzip2 git && \
+    apt-get install --no-install-recommends -y curl ca-certificates bzip2 git unzip && \
     curl -sLo /tmp/Anaconda2-5.0.1-Linux-x86_64.sh https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh && \
     bash /tmp/Anaconda2-5.0.1-Linux-x86_64.sh -b -f -p /opt/anaconda2 && \
     conda install -y bcolz && \
